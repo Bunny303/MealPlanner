@@ -1,0 +1,35 @@
+{% extends 'website/base.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-6">
+        <div id="recipe-container">
+            {% if recipe.image %}
+            <img src="/{{ recipe.image }}" width="50px" height="50px"/>
+            {% else %}
+            <img src="http://dummyimage.com/50x50/eee/000000&text=RecipeImage" width="50px"/>
+            {% endif %}
+            {{ recipe.name }}
+            {{ recipe.description }}
+            <select id="portion_number" name="portion_number">
+                {% for i in range %}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <div id="container">
+        {% for ingredient in recipe.recipeingredient_set.all%}
+        <p class="ing-quantity">{{ingredient.quantity}}</p>
+        <p>{{ingredient.ingredient.unit}}</p>
+        <p>{{ingredient.ingredient.name}}</p>
+        {% endfor %}
+    </div>
+</div>
+{% load staticfiles %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'add-recipe.js' %}"></script>
+<script type="text/javascript" src="{% static 'view-recipe.js' %}"></script>
+<script>
+    set_portion_number({{recipe.portion_number}})
+</script>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'website/base.html' %}
+{% block content %}
+<ul>
+    {% for ingredient, quantity in groceries.items %}
+        <li>
+            {{ quantity }} {{ ingredient.unit }} {{ ingredient.name }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

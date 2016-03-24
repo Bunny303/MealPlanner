@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="/new-meal/" method="post">
+    {% csrf_token %}
+    <div>
+        <input type="text" id="name" name="name" readOnly="true" value="{{ day }}"/>
+        <select id="recipe" multiple='multiple' name="recipe">
+            {% for recipe in recipes %}
+            <option value="{{ recipe.pk }}">
+                {{ recipe.name }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <input type="submit" value="Add"/>
+</form>
+</body>
+</html>
