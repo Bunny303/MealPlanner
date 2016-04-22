@@ -35,7 +35,7 @@ class LoginView(FormView):
 
 class LogoutView(LoginRequiredMixin, RedirectView):
     permanent = False
-    url = reverse_lazy('login')
+    url = reverse_lazy('home')
 
     def get(self, request, *args, **kwargs):
         # cache.clear()
