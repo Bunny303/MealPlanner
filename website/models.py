@@ -18,12 +18,20 @@ class Ingredient(models.Model):
 
 
 class Recipe(models.Model):
+    CATEGORIES = (
+        (1, 'Main Dish'),
+        (2, 'Salad'),
+        (3, 'Soup'),
+        (4, 'Desert'),
+    )
+
     name = models.CharField(max_length=50, blank=True)
     description = models.CharField(max_length=550, blank=True)
     ingredients = models.ManyToManyField(Ingredient, through='RecipeIngredient', blank=True)
     image = models.ImageField(null=True, upload_to="static")
     portion_number = models.IntegerField(default=1)
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
+    category = models.IntegerField(choices=CATEGORIES, default=None, blank=True, null=True)
 
     class Meta:
         ordering = ['name']
