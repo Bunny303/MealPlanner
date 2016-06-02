@@ -1,0 +1,27 @@
+{
+  "name": "mealplanner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bunny303/MealPlanner.git"
+  },
+  "author": "Nadezhda Vazharova",
+  "license": "ISC",
+  "homepage": "https://github.com/Bunny303/MealPlanner#readme",
+  "devDependencies": {
+    "browser-sync": "^2.12.10",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-di": "0.0.33",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}

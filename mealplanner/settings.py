@@ -82,9 +82,11 @@ WSGI_APPLICATION = 'mealplanner.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mealplannerdb',
+        'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': 'postgres',
+        'PASSWORD': '13',
+        'HOST': '127.0.0.1',
+        'PORT': '',
     }
 }
 

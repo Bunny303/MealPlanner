@@ -43,3 +43,21 @@ Temporary Items
 .apdisk
 *.pyc
 
+
+
+
+############
+# Python   #
+############
+
+venv
+*.pyc
+*.pot
+.DS_Store
+.coverage
+local_settings.py
+
+*.log
+staticfiles
+node_modules
+bower_components
