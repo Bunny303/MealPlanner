@@ -1,0 +1,23 @@
+.navbar-wrapper{
+	background-color: rgba($white, 0.9)
+}
+
+.navbar{
+	text-transform: uppercase;
+	border: none;
+	color: $red;
+	background-color: transparent;
+	margin-bottom: 0;
+}
+
+.navbar-nav>li>a{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.navbar-brand{
+	padding: 0;
+	width: 100px;
+}
