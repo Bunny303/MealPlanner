@@ -1,0 +1,84 @@
+/*------------------------------------*\
+    #Mixins
+\*------------------------------------*/
+
+// Media queries ===============================================
+
+@mixin mq-min-width($min-width) {
+    @media (min-width: #{$min-width}) {
+        @content;
+    }
+}
+
+@mixin mq-max-width($max-width) {
+    @media (max-width: #{$max-width}) {
+        @content;
+    }
+}
+
+@mixin xsm-devices {
+    @media (min-width: #{$xsm-breakpoint}) {
+        @content;
+    }
+}
+
+@mixin sm-devices {
+    @media (min-width: #{$sm-breakpoint}) and (max-width: #{$md-breakpoint - 1px}) {
+        @content;
+    }
+}
+
+@mixin sm-devices-up {
+    @media (min-width: #{$sm-breakpoint}) {
+        @content;
+    }
+}
+
+@mixin sm-devices-p {
+    @media (min-width: #{$sm-breakpoint}) and #{$portrait} {
+        @content;
+    }
+}
+
+@mixin sm-devices-l {
+    @media (min-width: #{$sm-breakpoint}) and #{$landscape} {
+        @content;
+    }
+}
+
+@mixin md-devices {
+    @media (min-width: #{$md-breakpoint}) {
+        @content;
+    }
+}
+
+@mixin lg-devices {
+    @media (min-width: #{$lg-breakpoint}) {
+        @content;
+    }
+}
+
+@mixin retina {
+    @media
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) {
+            @content;
+        }
+}
+
+@mixin giveMeEllipsis($N:1, $X: 1em){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $N; /* number of lines to show */
+    line-height: $X;        /* fallback */
+    min-height: $X*$N*0.95;       /* fallback */
+    max-height: $X*$N*0.95;       /* fallback */
+}
+
+

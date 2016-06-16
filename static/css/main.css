@@ -1,26 +1,265 @@
+/* Webfont: BloggerSans */
+@font-face {
+  font-family: 'BloggerSans';
+  src: url("fonts/BloggerSans.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/BloggerSans.eot?#iefix") format("embedded-opentype"), url("fonts/BloggerSans.woff") format("woff"), url("fonts/BloggerSans.ttf") format("truetype"), url("fonts/BloggerSans.svg#BloggerSans") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+
+/* Webfont: BloggerSans-Bold */
+@font-face {
+  font-family: 'BloggerSans';
+  src: url("fonts/BloggerSans-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/BloggerSans-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/BloggerSans-Bold.woff") format("woff"), url("fonts/BloggerSans-Bold.ttf") format("truetype"), url("fonts/BloggerSans-Bold.svg#BloggerSans-Bold") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: bold;
+  text-rendering: optimizeLegibility; }
+
+/* Webfont: BloggerSans-Light */
+@font-face {
+  font-family: 'BloggerSans';
+  src: url("fonts/BloggerSans-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/BloggerSans-Light.eot?#iefix") format("embedded-opentype"), url("fonts/BloggerSans-Light.woff") format("woff"), url("fonts/BloggerSans-Light.ttf") format("truetype"), url("fonts/BloggerSans-Light.svg#BloggerSans-Light") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 300;
+  text-rendering: optimizeLegibility; }
+
+/* Webfont: BloggerSans-Medium */
+@font-face {
+  font-family: 'BloggerSans';
+  src: url("fonts/BloggerSans-Medium.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/BloggerSans-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/BloggerSans-Medium.woff") format("woff"), url("fonts/BloggerSans-Medium.ttf") format("truetype"), url("fonts/BloggerSans-Medium.svg#BloggerSans-Medium") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility; }
+
+/* Webfont: BloggerSans-Italic */
+@font-face {
+  font-family: 'BloggerSans';
+  src: url("fonts/BloggerSans-Italic.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/BloggerSans-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/BloggerSans-Italic.woff") format("woff"), url("fonts/BloggerSans-Italic.ttf") format("truetype"), url("fonts/BloggerSans-Italic.svg#BloggerSans-Italic") format("svg");
+  /* Legacy iOS */
+  font-style: italic;
+  font-weight: bold;
+  text-rendering: optimizeLegibility; }
+
+/* Webfont: BloggerSans-LightItalic */
+@font-face {
+  font-family: 'BloggerSans';
+  src: url("fonts/BloggerSans-LightItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/BloggerSans-LightItalic.eot?#iefix") format("embedded-opentype"), url("fonts/BloggerSans-LightItalic.woff") format("woff"), url("fonts/BloggerSans-LightItalic.ttf") format("truetype"), url("fonts/BloggerSans-LightItalic.svg#BloggerSans-LightItalic") format("svg");
+  /* Legacy iOS */
+  font-style: italic;
+  font-weight: 300;
+  text-rendering: optimizeLegibility; }
+
+/* Webfont: BloggerSans-BoldItalic */
+@font-face {
+  font-family: 'BloggerSans';
+  src: url("fonts/BloggerSans-BoldItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/BloggerSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("fonts/BloggerSans-BoldItalic.woff") format("woff"), url("fonts/BloggerSans-BoldItalic.ttf") format("truetype"), url("fonts/BloggerSans-BoldItalic.svg#BloggerSans-BoldItalic") format("svg");
+  /* Legacy iOS */
+  font-style: italic;
+  font-weight: bold;
+  text-rendering: optimizeLegibility; }
+
+/* Webfont: BloggerSans-MediumItalic */
+@font-face {
+  font-family: 'BloggerSans';
+  src: url("fonts/BloggerSans-MediumItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/BloggerSans-MediumItalic.eot?#iefix") format("embedded-opentype"), url("fonts/BloggerSans-MediumItalic.woff") format("woff"), url("fonts/BloggerSans-MediumItalic.ttf") format("truetype"), url("fonts/BloggerSans-MediumItalic.svg#BloggerSans-MediumItalic") format("svg");
+  /* Legacy iOS */
+  font-style: italic;
+  font-weight: 500;
+  text-rendering: optimizeLegibility; }
+
+/*------------------------------------*    #Colors
+\*------------------------------------*/
+/*------------------------------------*    #Fonts
+\*------------------------------------*/
+/*------------------------------------*    #Z-index levels
+\*------------------------------------*/
+/*------------------------------------*    #Mixins
+\*------------------------------------*/
+/* Webfont: BloggerSans */
+@font-face {
+  font-family: 'BloggerSans';
+  src: url("fonts/BloggerSans.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/BloggerSans.eot?#iefix") format("embedded-opentype"), url("fonts/BloggerSans.woff") format("woff"), url("fonts/BloggerSans.ttf") format("truetype"), url("fonts/BloggerSans.svg#BloggerSans") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+
+/* Webfont: BloggerSans-Bold */
+@font-face {
+  font-family: 'BloggerSans';
+  src: url("fonts/BloggerSans-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/BloggerSans-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/BloggerSans-Bold.woff") format("woff"), url("fonts/BloggerSans-Bold.ttf") format("truetype"), url("fonts/BloggerSans-Bold.svg#BloggerSans-Bold") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: bold;
+  text-rendering: optimizeLegibility; }
+
+/* Webfont: BloggerSans-Light */
+@font-face {
+  font-family: 'BloggerSans';
+  src: url("fonts/BloggerSans-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/BloggerSans-Light.eot?#iefix") format("embedded-opentype"), url("fonts/BloggerSans-Light.woff") format("woff"), url("fonts/BloggerSans-Light.ttf") format("truetype"), url("fonts/BloggerSans-Light.svg#BloggerSans-Light") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 300;
+  text-rendering: optimizeLegibility; }
+
+/* Webfont: BloggerSans-Medium */
+@font-face {
+  font-family: 'BloggerSans';
+  src: url("fonts/BloggerSans-Medium.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/BloggerSans-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/BloggerSans-Medium.woff") format("woff"), url("fonts/BloggerSans-Medium.ttf") format("truetype"), url("fonts/BloggerSans-Medium.svg#BloggerSans-Medium") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility; }
+
+/* Webfont: BloggerSans-Italic */
+@font-face {
+  font-family: 'BloggerSans';
+  src: url("fonts/BloggerSans-Italic.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/BloggerSans-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/BloggerSans-Italic.woff") format("woff"), url("fonts/BloggerSans-Italic.ttf") format("truetype"), url("fonts/BloggerSans-Italic.svg#BloggerSans-Italic") format("svg");
+  /* Legacy iOS */
+  font-style: italic;
+  font-weight: bold;
+  text-rendering: optimizeLegibility; }
+
+/* Webfont: BloggerSans-LightItalic */
+@font-face {
+  font-family: 'BloggerSans';
+  src: url("fonts/BloggerSans-LightItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/BloggerSans-LightItalic.eot?#iefix") format("embedded-opentype"), url("fonts/BloggerSans-LightItalic.woff") format("woff"), url("fonts/BloggerSans-LightItalic.ttf") format("truetype"), url("fonts/BloggerSans-LightItalic.svg#BloggerSans-LightItalic") format("svg");
+  /* Legacy iOS */
+  font-style: italic;
+  font-weight: 300;
+  text-rendering: optimizeLegibility; }
+
+/* Webfont: BloggerSans-BoldItalic */
+@font-face {
+  font-family: 'BloggerSans';
+  src: url("fonts/BloggerSans-BoldItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/BloggerSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("fonts/BloggerSans-BoldItalic.woff") format("woff"), url("fonts/BloggerSans-BoldItalic.ttf") format("truetype"), url("fonts/BloggerSans-BoldItalic.svg#BloggerSans-BoldItalic") format("svg");
+  /* Legacy iOS */
+  font-style: italic;
+  font-weight: bold;
+  text-rendering: optimizeLegibility; }
+
+/* Webfont: BloggerSans-MediumItalic */
+@font-face {
+  font-family: 'BloggerSans';
+  src: url("fonts/BloggerSans-MediumItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/BloggerSans-MediumItalic.eot?#iefix") format("embedded-opentype"), url("fonts/BloggerSans-MediumItalic.woff") format("woff"), url("fonts/BloggerSans-MediumItalic.ttf") format("truetype"), url("fonts/BloggerSans-MediumItalic.svg#BloggerSans-MediumItalic") format("svg");
+  /* Legacy iOS */
+  font-style: italic;
+  font-weight: 500;
+  text-rendering: optimizeLegibility; }
+
 body {
-  font-family: "Tahoma", Geneva, sans-serif;
-  background-color: #111111; }
+  background-color: #777; }
+  body *, body p, body a, body h1, body h2, body h3, body h4, body h5, body h5, body h6 {
+    font-family: BloggerSans, Helvetica, sans-serif; }
 
 .navbar-wrapper {
   background-color: rgba(238, 238, 238, 0.9); }
 
-.navbar {
+.navbar-default {
   text-transform: uppercase;
   border: none;
-  color: #F58A1F;
   background-color: transparent;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  letter-spacing: 1px; }
+  .navbar-default .navbar-nav > li > a {
+    padding: 5px 10px;
+    margin: 20px 2px;
+    font-weight: 500;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 3px;
+    -webkit-transition-property: background-color color;
+    transition-property: background-color color;
+    -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out; }
+    .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+      color: #eeeeee;
+      background-color: #37a000; }
+  .navbar-default .navbar-nav .active > a, .navbar-default .navbar-nav .active > a:focus, .navbar-default .navbar-nav .active > a:hover {
+    color: #eeeeee;
+    background-color: #37a000; }
+  .navbar-default .navbar-brand {
+    padding: 0;
+    width: 100px; }
 
-.navbar-nav > li > a {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px; }
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #eeeeee;
+  font-size: 0.85em; }
+  footer .colored {
+    color: #37a000; }
 
-.navbar-brand {
-  padding: 0;
-  width: 100px; }
+.three-steps {
+  overflow: hidden;
+  position: relative;
+  text-align: center; }
+  .three-steps img {
+    -webkit-filter: blur(1.7px);
+            filter: blur(1.7px); }
 
-body {
-  color: red; }
+.three-steps-overlay {
+  background-color: #37a000;
+  background-color: #143a00;
+  background-color: #2e8700;
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+
+.three-steps-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 24vw;
+  font-size: 5.5vw;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #eeeeee; }
+
+.landing-signup {
+  font-size: 0.5em;
+  padding: 15px 35px;
+  border-radius: 40px;
+  background-color: #eeeeee;
+  color: #777;
+  font-weight: lighter; }

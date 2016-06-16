@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
+{% load staticfiles %}
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,10 +22,16 @@
 
     {% include 'website/common/_navbar.html' %}
         
-    <div class="container">
-        {% block content %}
-        {% endblock %}
-    </div>
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+    <footer>
+        Author: <a href="https://github.com/andrey-andreev" class="colored">Andrey Andreev, 2016</a><br>
+        <span class="colored">Open Source Project</span><br>
+        Powered by: <a href="https://www.djangoproject.com/" class="colored">Django</a> and <a href="http://getbootstrap.com/" class="colored">Twitter Bootstrap</a><br>
+    </footer>
+    {% endblock %}
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

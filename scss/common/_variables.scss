@@ -1,3 +1,58 @@
-$black: #111111;
+/*------------------------------------*\
+    #Colors
+\*------------------------------------*/
+
 $white: #eeeeee;
+$boulder: #777;
+$black: #111111;
+
 $red: #F58A1F;
+$green: #37a000;
+
+/*------------------------------------*\
+    #Fonts
+\*------------------------------------*/
+
+$blogger: unquote("BloggerSans, Helvetica, sans-serif");
+
+/*------------------------------------*\
+    #Z-index levels
+\*------------------------------------*/
+
+$lvl-1: 100;
+$lvl-2: 200;
+$lvl-3: 300;
+$lvl-4: 400;
+$lvl-5: 500;
+$lvl-6: 600;
+$lvl-7: 700;
+$lvl-8: 800;
+$lvl-9: 900;
+$lvl-10: 1000;
+
+// Breakpoints
+$xxsm-breakpoint: 320px;
+$xsm-breakpoint: 480px;
+$sm-breakpoint: 768px;
+$md-breakpoint: 992px;
+$lg-breakpoint: 1170px;
+
+// Extras
+$screen: unquote('only screen');
+$portrait: unquote('(orientation : portrait)');
+$landscape: unquote('(orientation : landscape)');
+
+// ==================
+// Bootstrap media queries
+
+// Extra Small Devices, Phones
+$xsm-devices: unquote("only screen and (min-width : 480px)");
+
+// Small devices (tablets, 768px and up)
+$sm-devices: unquote("(min-width : 768px)");
+
+// Medium devices (desktops, 992px and up)
+$md-devices: unquote("(min-width : 992px)");
+
+// Large devices (large desktops, 1200px and up)
+$lg-devices: unquote("(min-width : 1200px)");

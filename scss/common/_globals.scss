@@ -1,4 +1,7 @@
  body{
- 	font-family: "Tahoma", Geneva, sans-serif;
- 	background-color: $black;
+ 	background-color: $boulder;
+
+ 	*, p, a, h1, h2, h3, h4, h5, h5, h6{
+	 	font-family: $blogger;
+ 	}
  }

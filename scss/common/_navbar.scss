@@ -2,22 +2,45 @@
 	background-color: rgba($white, 0.9)
 }
 
-.navbar{
+.navbar-default{
 	text-transform: uppercase;
 	border: none;
-	color: $red;
 	background-color: transparent;
 	margin-bottom: 0;
-}
+ 	letter-spacing: 1px;
 
-.navbar-nav>li>a{
-	padding-top: 15px;
-	padding-bottom: 15px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
+	.navbar-nav{
+		&>li>a{
+			padding: 5px 10px;
+			margin: 20px 2px;
+			font-weight: 500;
+			font-size: 1.1em;
+			border: none;
+			border-radius: 3px;
 
-.navbar-brand{
-	padding: 0;
-	width: 100px;
+			transition-property: background-color color;
+			transition-duration: 0.4s;
+			transition-timing-function: ease-in-out;
+
+			&:focus,
+			&:hover{
+				color: $white;
+				background-color: $green;
+			}
+		}
+
+		.active>a{
+			&,
+			&:focus,
+			&:hover{
+				color: $white;
+				background-color: $green;
+			}
+		}
+	}
+
+	.navbar-brand{
+		padding: 0;
+		width: 100px;
+	}
 }

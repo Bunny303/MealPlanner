@@ -1,0 +1,42 @@
+.three-steps{
+	// max-height: 800px;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+
+	img{
+		filter: blur(1.7px);
+	}
+}
+
+.three-steps-overlay{
+	background-color: $green;
+	background-color: darken($green, 20%);
+	background-color: darken($green, 5%);
+	opacity: 0.6;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.three-steps-text{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 24vw;
+	font-size: 5.5vw;
+	font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: $white;
+}
+
+.landing-signup{
+	font-size: 0.5em;
+	padding: 15px 35px;
+	border-radius: 40px;
+	background-color: $white;
+	color: $boulder;
+	font-weight: lighter;
+}
