@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icons/icomoon.eot?22kuxo');
+    src:    url('fonts/icons/icomoon.eot?22kuxo#iefix') format('embedded-opentype'),
+        url('fonts/icons/icomoon.ttf?22kuxo') format('truetype'),
+        url('fonts/icons/icomoon.woff?22kuxo') format('woff'),
+        url('fonts/icons/icomoon.svg?22kuxo#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="mp-icon-"], [class*=" mp-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mp-icon-document:before {
+    content: "\e005";
+}
+.mp-icon-calendar:before {
+    content: "\e00d";
+}
+.mp-icon-pencil:before {
+    content: "\e032";
+}
+.mp-icon-pen:before {
+    content: "\e900";
+}
+.mp-icon-note:before {
+    content: "\e901";
+}
+.mp-icon-calendar2:before {
+    content: "\e902";
+}
+.mp-icon-pencil2:before {
+    content: "\e905";
+}
+.mp-icon-pencil22:before {
+    content: "\e906";
+}
+.mp-icon-file-text2:before {
+    content: "\e926";
+}
+.mp-icon-spoon-knife:before {
+    content: "\e9a3";
+}
+.mp-icon-list-numbered:before {
+    content: "\e9b9";
+}
+

@@ -1,0 +1,111 @@
+.three-steps-section{
+	min-height: calc(100vh - 2*70px);
+	text-align: center;
+	padding-top: 100px;
+
+	.step-anchor{
+		&:link,
+		&:visited,
+		&:active,
+		&:hover,
+		&:hover *{
+			text-decoration: none;
+		}
+	}
+
+	.step{
+		margin-bottom: 70px;
+
+		&:hover{
+			.step-icon{
+				transform: scale(1.05);
+			}
+		}
+	}
+
+	.step-icon{
+		width: 200px;
+		height: 200px;
+		border-radius: 100px;
+		font-size: 6em;
+		color: $white;
+		padding-top: 50px;
+		margin: 0 auto;
+		border: 5px solid transparent;
+		transition: transform 0.2s ease-in-out;
+	}
+
+	.step-heading{
+		display: block;
+		font-size: 2.4em;
+	    font-weight: lighter;
+	    color: $mine-shaft;
+	    height: 72px;
+	    margin-bottom: 10px;
+	}
+
+	.step-heading-underline{
+		height: 2px;
+		width: 150px;
+		margin: 0 auto;
+	    margin-bottom: 20px;
+	}
+
+	.step-description{
+		font-size: 1.4em;
+		color: $black;
+		font-weight: lighter;
+	}
+
+	.mp-icon-pencil{
+		background-color: $orange;
+		
+		&+.step-heading{
+			color: $orange;
+		}
+		
+		&+.step-heading+.step-heading-underline{
+			background-color: $orange;
+		}
+	}
+
+	.mp-icon-calendar{
+		background-color: $purple;
+		
+		&+.step-heading{
+			color: $purple;
+		}
+		
+		&+.step-heading+.step-heading-underline{
+			background-color: $purple;
+		}
+	}
+
+	.mp-icon-document{
+		background-color: $purple-dark;
+		
+		&+.step-heading{
+			color: $purple-dark;
+		}
+		
+		&+.step-heading+.step-heading-underline{
+			background-color: $purple-dark;
+		}
+	}
+
+}
+
+@include sm-devices-up {
+	.three-steps-section{
+		padding-top: 200px;
+	}
+}
+
+@include lg-devices {
+	.three-steps-section{
+
+		.step-heading{
+			height: 42px;
+		}
+	}
+}

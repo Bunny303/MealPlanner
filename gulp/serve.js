@@ -15,7 +15,9 @@ module.exports = function(gulp, paths, browserSync, bsName) {
             proxy: 'localhost:8000'
         });
 
-        gulp.watch(paths.sass.watch, ['sass']);
+        // gulp.watch(paths.sass.watch, ['sass']);
+        gulp.watch(paths.sass.watch, ['sass']).on('change', bs.reload);
+
         gulp.watch(paths.templates.watch).on('change', reload);
         gulp.watch(paths.js.watch).on('change', reload);
     });

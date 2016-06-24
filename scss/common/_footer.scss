@@ -1,10 +1,19 @@
 footer{
 	text-align: center;
-	padding: 15px 0;
+	padding: 11px 0;
 	background-color: $white;
 	font-size: 0.85em;
 
 	.colored{
 		color: $green;
+	}
+}
+
+footer.footer-inverse{
+	background-color: $mine-shaft;
+	color: $green;
+
+	.colored{
+		color: $white;
 	}
 }

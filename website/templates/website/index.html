@@ -3,14 +3,69 @@
 
 {% block content %}
 
-<div class="three-steps">
-	<img class="img-responsive" src="{% static "img/landing-three-steps.jpg" %}">
-	<div class="three-steps-overlay"></div>
-	<p class="three-steps-text"> 
-		Three simple steps<br>
-		to make your grocery<br>
-		<span class="text-uppercase">easier and faster!</span><br>
-		<a class="landing-signup" href="{% url 'register' %}">Sign Up</a>
-	</p>
+<div class="logo-section" style='background-image: url("{% static "img/landing-three-steps.jpg" %}")'>
+	<div class="logo-section-overlay"></div>
+	<div class="logo-section-text"> 
+		<div class="landing-text-logo">
+			<div class="overlay"></div>
+			<div class="meal">Meal</div>
+			<div class="planner">Planner</div>
+		</div>
+		<h1 class="slogan">Three simple steps to make your<br>grocery easier and faster!</h1>
+	</div>
+	<div class="learn-more-wrapper">
+		<a class="landing-signup" href="{% url 'register' %}">Get Started Now</a>
+		<p class="or">or</p>
+		<a class="learn-more-arrow" href="#">Learn how</a>
+	</div>
+</div>
+
+<div class="three-steps-section">
+	<div class="container">
+		<div class="row text-center">
+			<a class="step-anchor" href="{% url 'register' %}">
+				<div class="col-sm-4 step">
+					<div class="step-icon mp-icon-pencil"></div>
+					<h3 class="step-heading">Create recipe</h3>
+					<div class="step-heading-underline"></div>
+					<p class="step-description">Add ingredients and description to your recipe</p>
+				</div>
+			</a>
+			<a class="step-anchor" href="{% url 'register' %}">
+				<div class="col-sm-4 step">
+					<div class="step-icon mp-icon-calendar"></div>
+					<h3 class="step-heading">Plan your weekly meals</h3>
+					<div class="step-heading-underline"></div>
+					<p class="step-description">organize your meals for the week</p>
+				</div>
+			</a>
+			<a class="step-anchor" href="{% url 'register' %}">
+				<div class="col-sm-4 step">
+					<div class="step-icon mp-icon-document"></div>
+					<h3 class="step-heading">Get your grocery list</h3>
+					<div class="step-heading-underline"></div>
+					<p class="step-description">Just get final grocery list</p>
+				</div>
+			</a>
+		</div>
+	</div>
 </div>
 {% endblock %}
+
+
+{% block scripts %}
+<script type="text/javascript">
+(function() {
+    'use strict';
+	
+	var $threeStepsSection = $('.three-steps-section');
+	var navHeight = 70;
+
+	$('.learn-more-arrow').on('click', function(e){
+		e.preventDefault();
+
+		$('html,body').animate({scrollTop: $threeStepsSection.offset().top - navHeight});
+	})
+}());
+</script>
+{% endblock scripts %}

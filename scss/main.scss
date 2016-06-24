@@ -1,15 +1,25 @@
 @import
+    
+    // Fonts
+    "fonts/bloggersans",
+    "fonts/acknowledgement",
+    "fonts/antonio",
+    "fonts/bpdiet",
+    "fonts/maidenorange",
+    "fonts/icons",
 
-    "common/bloggersans",
-    "common/variables",
+    // Utils
     "common/mixins",
-    "common/bloggersans",
+
+    // Common
+    "common/variables",
     "common/globals",
-    // "common/buttons"
     "common/navbar",
     "common/footer",
 
-    "landing/landing"
+    // Others
+    "landing/landing",
+    "landing/three-steps"
 
     ;
 

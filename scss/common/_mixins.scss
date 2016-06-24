@@ -70,6 +70,8 @@
         }
 }
 
+// Ellipsis ===============================================
+
 @mixin giveMeEllipsis($N:1, $X: 1em){
     overflow: hidden;
     text-overflow: ellipsis;

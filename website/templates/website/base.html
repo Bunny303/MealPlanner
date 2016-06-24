@@ -23,15 +23,15 @@
     {% include 'website/common/_navbar.html' %}
         
     {% block content %}
-    {% endblock %}
+    {% endblock content %}
 
     {% block footer %}
-    <footer>
-        Author: <a href="https://github.com/andrey-andreev" class="colored">Andrey Andreev, 2016</a><br>
-        <span class="colored">Open Source Project</span><br>
-        Powered by: <a href="https://www.djangoproject.com/" class="colored">Django</a> and <a href="http://getbootstrap.com/" class="colored">Twitter Bootstrap</a><br>
+    <footer class="footer-inverse">
+        Author: <a href="https://github.com/andrey-andreev" target="_blank" class="colored">Andrey Andreev</a> & <a target="_blank" class="colored" href="https://github.com/Bunny303">Nadezhda Vazharova</a>, 2016<br>
+        <a target="_blank" class="colored" href="https://github.com/Bunny303/MealPlanner">Open Source Project</a><br>
+        Powered by: <a href="https://www.djangoproject.com/" target="_blank" class="colored">Django</a> and <a href="http://getbootstrap.com/" target="_blank" class="colored">Twitter Bootstrap</a><br>
     </footer>
-    {% endblock %}
+    {% endblock footer %}
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -39,5 +39,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
             crossorigin="anonymous"></script>
+    {% block scripts %}
+    {% endblock scripts %}
 </body>
 </html>
