@@ -25,7 +25,7 @@ SECRET_KEY = '&8&v=ya8n$s*y-53e15+7eux^j61t12*jee^8+xd4k%q%vjq!='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['planyourmeal.herokuapp.com']
 
 
 # Application definition
@@ -132,7 +132,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
-STATIC_ROOT = ‘staticfiles’
+STATIC_ROOT = 'staticfiles'
 
 import dj_database_url
 DATABASES['default'] = dj_database_url.config()
