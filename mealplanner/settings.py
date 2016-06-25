@@ -129,11 +129,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)
-
-
 import dj_database_url
 DATABASES['default'] = dj_database_url.config()
 
