@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&8&v=ya8n$s*y-53e15+7eux^j61t12*jee^8+xd4k%q%vjq!='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = [‘planyourmeal.herokuapp.com’]
+ALLOWED_HOSTS = []
 
 
 # Application definition
