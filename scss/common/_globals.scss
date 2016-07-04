@@ -1,11 +1,40 @@
+html, body{
+	height: 100%;
+}
+
+.block-content{
+	min-height: 100%;
+	// margin-top: -$nav-height;
+	margin-bottom: -$footer-height;
+	// padding-top: 30px;
+	// padding-bottom: 30px;
+
+	&:before,
+	&:after{
+		content: "";
+		display: block;
+	}
+
+	&:before{
+		height: $nav-height
+	}
+
+	&:after{
+		height: $footer-height;
+	}
+}
+
 body{
+	font-size: 16px;
+	
  	*, p, a, h1, h2, h3, h4, h5, h5, h6{
 	 	font-family: $blogger;
  	}
 
- 	padding-top: $nav-height;
+ 	// padding-top: $nav-height;
 }
 
 .text-fw-light{
 	font-weight: 300;
 }
+

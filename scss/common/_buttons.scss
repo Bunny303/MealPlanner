@@ -1,0 +1,23 @@
+.mp-btn{
+	border: none;
+	background-color: $green;
+	color: $white;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	@include mixinTransition(background-color color);
+
+	&:hover{
+		background-color: darken($green, 10%);
+	}
+
+	// visited, focus, active
+}
+
+.mp-btn-sm{
+
+}
+
+.mp-btn-lg{
+
+}
+

@@ -226,8 +226,37 @@
 \*------------------------------------*/
 /*------------------------------------*    #Z-index levels
 \*------------------------------------*/
+.mp-btn {
+  border: none;
+  background-color: #6bbe98;
+  color: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  -webkit-transition-property: background-color color;
+  transition-property: background-color color;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s; }
+  .mp-btn:hover {
+    background-color: #4bab7f; }
+
+html, body {
+  height: 100%; }
+
+.block-content {
+  min-height: 100%;
+  margin-bottom: -70px; }
+  .block-content:before, .block-content:after {
+    content: "";
+    display: block; }
+  .block-content:before {
+    height: 75px; }
+  .block-content:after {
+    height: 70px; }
+
 body {
-  padding-top: 70px; }
+  font-size: 16px; }
   body *, body p, body a, body h1, body h2, body h3, body h4, body h5, body h5, body h6 {
     font-family: BloggerSans, Helvetica, sans-serif; }
 
@@ -249,10 +278,10 @@ body {
     border-radius: 3px;
     -webkit-transition-property: background-color color;
     transition-property: background-color color;
-    -webkit-transition-duration: 0.4s;
-            transition-duration: 0.4s;
     -webkit-transition-timing-function: ease-in-out;
-            transition-timing-function: ease-in-out; }
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s; }
     .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
       color: #6bbe98; }
   .navbar-default .navbar-nav .active > a, .navbar-default .navbar-nav .active > a:focus, .navbar-default .navbar-nav .active > a:hover {
@@ -302,9 +331,52 @@ footer {
 
 footer.footer-inverse {
   background-color: #2b2b2b;
-  color: #6bbe98; }
+  color: #6bbe98;
+  position: relative; }
   footer.footer-inverse .colored {
     color: #fff; }
+
+.footer-arrow-top {
+  position: absolute;
+  right: 100px;
+  top: 28px;
+  -webkit-transition-property: top;
+  transition-property: top;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  cursor: pointer; }
+  .footer-arrow-top:after {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 16px solid #2b2b2b; }
+  .footer-arrow-top:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 20px solid #fff; }
+  .footer-arrow-top:hover {
+    top: 23px; }
+
+.form-field {
+  width: 100%;
+  padding: 15px 15px;
+  border: 2px solid #6bbe98;
+  margin-bottom: 10px; }
+
+label {
+  display: block; }
+
+.error {
+  color: #EC2224; }
 
 .logo-section {
   text-align: center;
@@ -338,45 +410,72 @@ footer.footer-inverse {
       top: 24vh; } }
 
 .landing-text-logo {
+  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 36vh;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
+  text-decoration: none;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s; }
   .landing-text-logo .meal {
+    color: #F58A1F;
     font-family: acknowledgement;
     font-family: bpdiet;
     text-transform: uppercase;
     font-size: 1.45em;
     margin-left: 0.8vh;
-    -webkit-transition: color 0.3s ease-in-out;
-    transition: color 0.3s ease-in-out; }
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s; }
   .landing-text-logo .planner {
+    color: #4A317C;
     font-family: antonio;
     font-family: maidenorange;
     font-weight: lighter;
     letter-spacing: -6px;
     font-size: 2.5em;
     margin-top: -4.5vh;
-    -webkit-transition: color 0.3s ease-in-out;
-    transition: color 0.3s ease-in-out; }
-  .landing-text-logo:hover {
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    transition: -webkit-transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s; }
+  .landing-text-logo:visited, .landing-text-logo:hover {
+    text-decoration: none;
     -webkit-transform: scale(1.1);
-            transform: scale(1.1); }
-    .landing-text-logo:hover .meal {
-      color: #F58A1F;
-      -webkit-transition: color 0.3s ease-in-out;
-      transition: color 0.3s ease-in-out; }
-    .landing-text-logo:hover .planner {
-      color: #4A317C;
-      -webkit-transition: color 0.3s ease-in-out;
-      transition: color 0.3s ease-in-out; }
+            transform: scale(1.1);
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s; }
+    .landing-text-logo:visited .meal, .landing-text-logo:hover .meal {
+      -webkit-transition-property: color;
+      transition-property: color;
+      -webkit-transition-timing-function: ease-in-out;
+              transition-timing-function: ease-in-out;
+      -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s; }
+    .landing-text-logo:visited .planner, .landing-text-logo:hover .planner {
+      -webkit-transition-property: color;
+      transition-property: color;
+      -webkit-transition-timing-function: ease-in-out;
+              transition-timing-function: ease-in-out;
+      -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s; }
 
 .slogan {
   margin: 0;
@@ -397,8 +496,12 @@ footer.footer-inverse {
   font-size: 22px;
   color: #fff;
   display: inline-block;
-  -webkit-transition: bottom 100ms ease-in-out;
-  transition: bottom 100ms ease-in-out; }
+  -webkit-transition-property: bottom;
+  transition-property: bottom;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s; }
   .learn-more-arrow:before {
     content: '';
     position: absolute;
@@ -420,8 +523,12 @@ footer.footer-inverse {
     text-decoration: none;
     color: #fff;
     bottom: 45px;
-    -webkit-transition: bottom 100ms ease-in-out;
-    transition: bottom 100ms ease-in-out; }
+    -webkit-transition-property: bottom;
+    transition-property: bottom;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s; }
 
 .landing-signup {
   font-size: 1.6em;
@@ -434,12 +541,12 @@ footer.footer-inverse {
   font-weight: lighter;
   border: 2px solid #fff;
   display: inline-block;
-  -webkit-transition-property: color background-color;
-  transition-property: color background-color;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
+  -webkit-transition-property: background-color color;
+  transition-property: background-color color;
   -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out; }
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s; }
   .landing-signup:hover {
     background-color: #fff;
     color: #6bbe98;
@@ -472,10 +579,14 @@ footer.footer-inverse {
     padding-top: 50px;
     margin: 0 auto;
     border: 5px solid transparent;
-    -webkit-transition: -webkit-transform 0.2s ease-in-out;
-    transition: -webkit-transform 0.2s ease-in-out;
-    transition: transform 0.2s ease-in-out;
-    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out; }
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s; }
   .three-steps-section .step-heading {
     display: block;
     font-size: 2.4em;

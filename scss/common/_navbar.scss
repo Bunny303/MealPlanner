@@ -17,9 +17,7 @@
 			border: 2px solid transparent;
 			border-radius: 3px;
 
-			transition-property: background-color color;
-			transition-duration: 0.4s;
-			transition-timing-function: ease-in-out;
+			@include mixinTransition(background-color color);
 
 			&:focus,
 			&:hover{

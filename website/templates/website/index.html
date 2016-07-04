@@ -6,11 +6,11 @@
 <div class="logo-section" style='background-image: url("{% static "img/landing-three-steps.jpg" %}")'>
 	<div class="logo-section-overlay"></div>
 	<div class="logo-section-text"> 
-		<div class="landing-text-logo">
+		<a class="landing-text-logo" href="{% url 'login' %}">
 			<div class="overlay"></div>
 			<div class="meal">Meal</div>
 			<div class="planner">Planner</div>
-		</div>
+		</a>
 		<h1 class="slogan">Three simple steps to make your<br>grocery easier and faster!</h1>
 	</div>
 	<div class="learn-more-wrapper">
@@ -65,6 +65,10 @@
 		e.preventDefault();
 
 		$('html,body').animate({scrollTop: $threeStepsSection.offset().top - navHeight});
+	})
+
+	$('.footer-arrow-top').on('click', function(){
+		$('html,body').animate({scrollTop: 0});
 	})
 }());
 </script>

@@ -36,44 +36,48 @@
 }
 
 .landing-text-logo{
+	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	width: 36vh;
-	transition: transform 0.3s ease-in-out;
+	text-decoration: none;
+	@include mixinTransition(transform, 0.3s);
 
 	.meal{
+		color: $orange;
 		font-family: $acknowledgement;
 		font-family: $bpdiet;
 		text-transform: uppercase;
 	    font-size: 1.45em;
 	    margin-left: 0.8vh;
-		transition: color 0.3s ease-in-out;
+	    @include mixinTransition(color, 0.3s);
 	}
 
 	.planner{
+		color: $purple-dark;
 		font-family: $antonio;
 		font-family: $maidenorange;
 		font-weight: lighter;
 		letter-spacing: -6px;
 		font-size: 2.5em;
 		margin-top: -4.5vh;
-		transition: color 0.3s ease-in-out;
+		@include mixinTransition(color, 0.3s);
 	}
-
-
+	
+	&:visited,
 	&:hover{
+		text-decoration: none;
+
 		.meal{
-			color: $orange;
-			transition: color 0.3s ease-in-out;
+			@include mixinTransition(color, 0.3s);
 		}
 
 		.planner{
-			color: $purple-dark;
-			transition: color 0.3s ease-in-out;
+			@include mixinTransition(color, 0.3s);
 		}
 
-		transition: transform 0.3s ease-in-out;
 		transform: scale(1.1);
+		@include mixinTransition(transform, 0.3s);
 	}
 }
 
@@ -98,7 +102,8 @@
 	font-size: 22px;
 	color: $white;
 	display: inline-block;
-	transition: bottom 100ms ease-in-out;
+
+	@include mixinTransition(bottom, 0.1s);
 
 	&:before{
 		content: '';
@@ -128,7 +133,7 @@
 		text-decoration: none;
 		color: $white;
 		bottom: 45px;
-		transition: bottom 100ms ease-in-out;
+		@include mixinTransition(bottom, 0.1s);
 	}
 }
 
@@ -144,9 +149,7 @@
 	border: 2px solid $white;
 	display: inline-block;
 
-	transition-property: color background-color;
-	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
+	@include mixinTransition(background-color color);
 
 	&:hover{
 		background-color: $white;

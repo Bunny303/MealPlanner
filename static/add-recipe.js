@@ -133,6 +133,28 @@ function removeMeal(recipe_id, day_name)
     });
 }
 
+function removeFromGroceryList(recipe_ingredient_id)
+{
+    var data = {
+        recipe_ingredient_id: recipe_ingredient_id
+    };
+    var element = event.target;
+    var parent = element.parentNode;
+    $.ajax({
+        "type": "POST",
+        "dataType": "json",
+        "url": "/remove-grocery/",
+        "data": data,
+        "success": function(results){
+            //todo: check if success == true
+            removeIngredientField(parent);
+        },
+        failure: function(errMsg) {
+            console.log(errMsg);
+        }
+    });
+}
+
 $(function() {
     // This function gets cookie with a given name
     function getCookie(name) {

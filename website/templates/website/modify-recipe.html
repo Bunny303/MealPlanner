@@ -47,8 +47,7 @@
                 <input type="text" readOnly="true" value="{{ingredient.quantity}}" name="ingredient_quantity"/>
                 <input type="text" readOnly="true" value="{{ingredient.ingredient.unit}}" name="ingredient_unit"/>
                 <input type="text" readOnly="true" value="{{ingredient.ingredient.name}}" name="ingredient_name"/>
-                <button type="button" onclick="deleteRecipeIngredient({{ ingredient.pk }})">Remove
-                </button>
+                <button type="button" onclick="deleteRecipeIngredient({{ ingredient.pk }})">Remove</button>
             </div>
             {% endfor %}
         </div>

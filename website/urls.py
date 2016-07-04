@@ -12,6 +12,7 @@ urlpatterns = [
                   url(r'^grocery-list/$', views.GroceryList.as_view(), name='grocery-list'),
                   url(r'^add-ingredient/$', views.RecipeIngredientCreate.as_view(), name='recipeingredient-create'),
                   url(r'^delete-ingredient/$', views.RecipeIngredientDelete.as_view(), name='recipeingredient-delete'),
+                  url(r'^remove-grocery/$', views.RecipeIngredientUpdate.as_view(), name='recipeingredient-update'),
                   url(r'^delete-recipe/(?P<pk>[0-9]+)/(?P<next>[0-9]+)/$', views.RecipeDelete.as_view(), name='recipe-delete'),
                   url(r'^update-recipe/(?P<pk>[0-9]+)/$', views.RecipeUpdate.as_view(), name='recipe-update'),
                   url(r'^view-recipe/(?P<pk>[0-9]+)/$', views.RecipeDetailView.as_view(), name='recipe-detail'),

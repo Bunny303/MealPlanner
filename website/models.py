@@ -44,6 +44,7 @@ class RecipeIngredient(models.Model):
     ingredient = models.ForeignKey(Ingredient)
     recipe = models.ForeignKey(Recipe, default=None, blank=True, null=True)
     quantity = models.FloatField(default=1.0)
+    forShopping = models.BooleanField(default=True)
 
     def __str__(self):
         return "{}{} {}".format(self.quantity, self.ingredient.unit, self.ingredient.name)

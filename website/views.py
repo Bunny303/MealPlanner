@@ -69,10 +69,11 @@ class GroceryList(LoginRequiredMixin, ListView):
         for day in Day.objects.all():
             for recipe in day.recipe.all():
                 for ingredient in recipe.recipeingredient_set.all():
-                    if ingredient.ingredient in groceries:
-                        groceries[ingredient.ingredient] = groceries[ingredient.ingredient] + ingredient.quantity
-                    else:
-                        groceries[ingredient.ingredient] = ingredient.quantity
+                    if ingredient.forShopping:
+                        if ingredient.ingredient in groceries:
+                            groceries[ingredient.ingredient] = groceries[ingredient.ingredient] + ingredient.quantity
+                        else:
+                            groceries[ingredient.ingredient] = ingredient.quantity
 
         context['groceries'] = groceries
         context['active'] = 'grocery-list'
@@ -133,6 +134,20 @@ class RecipeIngredientDelete(LoginRequiredMixin, View):
         else:
             return render(request, 'base.html')
 
+class RecipeIngredientUpdate(LoginRequiredMixin, View):
+    def post(self, request, *args, **kwargs):
+        recipe_ingredient = RecipeIngredient.objects.get(pk=int(request.POST.get('recipe_ingredient_id')))
+        # todo: find better way to do this
+        recipe_ingredient.forShopping = False
+        recipe_ingredient.save()
+        # todo: extract this code in mixin
+        if self.request.is_ajax():
+            data = {
+                'success': 1
+            }
+            return JsonResponse(data, safe=False)
+        else:
+            return render(request, 'base.html')
 
 class RecipeUpdate(LoginRequiredMixin, OwnerMixin, UpdateView):
     model = Recipe

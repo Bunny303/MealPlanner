@@ -12,8 +12,43 @@ footer{
 footer.footer-inverse{
 	background-color: $mine-shaft;
 	color: $green;
+	position: relative;
 
 	.colored{
 		color: $white;
+	}
+}
+
+.footer-arrow-top{
+	position: absolute;
+	right: 100px;
+	top: 28px;
+	@include mixinTransition(top);
+	cursor: pointer;
+
+	&:after{
+		content: '';
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+
+		border-bottom: 16px solid $mine-shaft;
+	}
+
+	&:before{
+		content: '';
+		position: absolute;
+		right: 0;
+		top: 0;
+		border-left: 25px solid transparent;
+		border-right: 25px solid transparent;
+
+		border-bottom: 20px solid $white;
+	}
+
+	&:hover{
+		top: 23px;
 	}
 }

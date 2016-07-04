@@ -21,15 +21,18 @@
 <body>
 
     {% include 'website/common/_navbar.html' %}
-        
+    
+    <div class="block-content">    
     {% block content %}
     {% endblock content %}
+    </div>
 
     {% block footer %}
     <footer class="footer-inverse">
         Author: <a href="https://github.com/andrey-andreev" target="_blank" class="colored">Andrey Andreev</a> & <a target="_blank" class="colored" href="https://github.com/Bunny303">Nadezhda Vazharova</a>, 2016<br>
         <a target="_blank" class="colored" href="https://github.com/Bunny303/MealPlanner">Open Source Project</a><br>
         Powered by: <a href="https://www.djangoproject.com/" target="_blank" class="colored">Django</a> and <a href="http://getbootstrap.com/" target="_blank" class="colored">Twitter Bootstrap</a><br>
+        <div class="footer-arrow-top"></div>
     </footer>
     {% endblock footer %}
 

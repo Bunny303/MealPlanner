@@ -1,23 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-{% if form.errors %}
-<p class="error">Sorry, that's not valid username or password</p>
-{% endif %}
+{% extends 'website/base.html' %}
 
-<form action="." method="post">
-    {% csrf_token %}
-    <label for="username">Username:</label>
-    <input type="text" name="username" value="" id="username"/>
-    <label for="password">Password:</label>
-    <input type="password" name="password" value="" id="password"/>
+{% block content %}
 
-    <input type="submit" value="login"/>
-    <input type="hidden" name="next" value="/"/>
-</form>
-</body>
-</html>
+<div class="container">
+	<div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+		{% if form.errors %}
+		<p class="error">Sorry, that's not valid username or password</p>
+		{% endif %}
+
+		<form action="." method="post">
+		    {% csrf_token %}
+		    <label for="username">Username:</label>
+		    <input class="form-field" type="text" name="username" value="" id="username"/>
+		    <label for="password">Password:</label>
+		    <input class="form-field" type="password" name="password" value="" id="password"/>
+
+		    <input class="mp-btn" type="submit" value="login"/>
+		    <input type="hidden" name="next" value="/"/>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
