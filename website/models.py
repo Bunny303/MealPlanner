@@ -4,12 +4,14 @@ from django.conf import settings
 
 class Ingredient(models.Model):
     UNITS = (
-        ('g', 'Gram'),
-        ('kg', 'Kilogram'),
-        ('number', 'Number'),
+        ('g', 'g'),
+        ('kg', 'kg'),
+        ('ml', 'ml'),
+        (None, None),
+        ('tbsp', 'tbsp'),
     )
     name = models.CharField(max_length=50)
-    unit = models.CharField(max_length=6, choices=UNITS, default='kg')
+    unit = models.CharField(max_length=6, choices=UNITS, default='kg', blank=True, null=True)
 
     # price = models.FloatField(default=0.0)
 

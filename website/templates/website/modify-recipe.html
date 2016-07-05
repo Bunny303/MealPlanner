@@ -19,6 +19,12 @@
                     <option value="{{i}}">{{i}}</option>
                     {% endfor %}
                 </select>
+                <select id="category" name="category">
+                    <option value="1">Main Dish</option>
+                    <option value="2">Salad</option>
+                    <option value="3">Soup</option>
+                    <option value="4">Desert</option>
+                </select>
             </div>
         </div>
         <div id="input-container">
@@ -29,9 +35,11 @@
             <div class="col-sm-2">
                 <label for="ingredient_unit">Unit:</label>
                 <select id="ingredient_unit">
+                    <option value=None>-</option>
                     <option value="kg">kg</option>
                     <option value="g">g</option>
-                    <option value="number">number</option>
+                    <option value="ml">ml</option>
+                    <option value="tbsp">tbsp</option>
                 </select>
             </div>
             <div class="col-sm-2">
