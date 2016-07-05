@@ -45,7 +45,7 @@ class Recipe(models.Model):
 class RecipeIngredient(models.Model):
     ingredient = models.ForeignKey(Ingredient)
     recipe = models.ForeignKey(Recipe, default=None, blank=True, null=True)
-    quantity = models.FloatField(default=1.0)
+    quantity = models.FloatField(default=1.0, blank=True, null=True)
     forShopping = models.BooleanField(default=True)
 
     def __str__(self):

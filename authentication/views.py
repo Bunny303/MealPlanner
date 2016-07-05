@@ -4,11 +4,11 @@ from django.contrib.auth import authenticate, login as auth_login, logout as aut
 from django.http import HttpResponseRedirect
 from django.views.generic import RedirectView, FormView
 from django.core.urlresolvers import reverse_lazy
-
+from .forms import MyUserCreateForm
 
 class AccountRegistrationView(FormView):
     template_name = 'authentication/register.html'
-    form_class = UserCreationForm
+    form_class = MyUserCreateForm
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
