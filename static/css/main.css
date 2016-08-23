@@ -240,6 +240,8 @@
           transition-duration: 0.2s; }
   .mp-btn:hover {
     background-color: #4bab7f; }
+  .mp-btn:focus {
+    outline: none; }
 
 html, body {
   height: 100%; }
