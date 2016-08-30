@@ -1,10 +1,30 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
 .form-field{
 	width: 100%;
 	padding: 15px 15px;
-	border: 2px solid $green;
+	border: none;
+	border: 1px solid $chalice;
+	color: $mine-shaft;
 	margin-bottom: 10px;
+	@include mixinTransition(border-color background-color);
+
+	&:focus,
+	&:hover{
+		border-color: $green;
+		// background-color: $seashell;
+		outline: none;
+	}
+}
+
+input[readonly="true"]{
+	border: none;
 }
 
 label{
-	display: block;
+	color: $boulder;
+ 	display: block;
+ 	font-weight: normal;
 }
+

@@ -1,73 +1,76 @@
 {% extends 'website/base.html' %}
 {% block content %}
-<div class="container">
-<div class="row">
-    <form action="." method="post" enctype="multipart/form-data">
-        <div class="col-sm-6">
-            {% csrf_token %}
-            <div id="recipe-container">
-                <input type='file' name="image" id="recipe-image"/>
-                <!--{% if recipe.image %}
-                <img src="/{{ recipe.image }}" width="50px"/>
-                {%endif%}-->
-                <label for="name">Title</label><br/>
-                <input type="text" id="name" name="name" value="{{ recipe.name }}"/>
-                <label for="description">Description</label><br/>
-                <input type="text" id="description" name="description" value="{{ recipe.description }}"/>
-                <label for="portion_number">Portion:</label>
-                <select id="portion_number" name="portion_number">
-                    {% for i in range %}
-                    <option value="{{i}}">{{i}}</option>
-                    {% endfor %}
-                </select>
-                <select id="category" name="category">
-                    <option value="1">Main Dish</option>
-                    <option value="2">Salad</option>
-                    <option value="3">Soup</option>
-                    <option value="4">Desert</option>
-                </select>
-            </div>
-        </div>
-        <div id="input-container">
-            <div class="col-sm-2">
-                <label for="ingredient_quantity">Quantity:</label>
-                <input type="text" id="ingredient_quantity"/>
-            </div>
-            <div class="col-sm-2">
-                <label for="ingredient_unit">Unit:</label>
-                <select id="ingredient_unit">
-                    <option value=None>-</option>
-                    <option value="kg">kg</option>
-                    <option value="g">g</option>
-                    <option value="ml">ml</option>
-                    <option value="tbsp">tbsp</option>
-                </select>
-            </div>
-            <div class="col-sm-2">
-                <label for="ingredient_name">Name:</label>
-                <input type="text" id="ingredient_name"/>
-            </div>
-            <div class="col-sm-2">
-                <button type="button" onclick="createRecipeIngredient({{ recipe.pk }})">+</button>
-            </div>
-        </div>
-
-        <div id="container">
-            {% for ingredient in recipe.recipeingredient_set.all%}
-            <div id="innerContainer">
-                <input type="text" readOnly="true" value="{{ingredient.quantity}}" name="ingredient_quantity"/>
-                <input type="text" readOnly="true" value="{{ingredient.ingredient.unit}}" name="ingredient_unit"/>
-                <input type="text" readOnly="true" value="{{ingredient.ingredient.name}}" name="ingredient_name"/>
-                <button type="button" onclick="deleteRecipeIngredient({{ ingredient.pk }})">Remove</button>
-            </div>
-            {% endfor %}
-        </div>
+<div class="container mp-cnt">
+    <div class="row">
         <div class="col-sm-12">
-            <input type="submit" value="Save"/>
-        </div>
-    </form>
+            <form action="." method="post" enctype="multipart/form-data">
+                <div class="col-sm-6">
+                    {% csrf_token %}
+                    <div id="recipe-container">
+                        <input type='file' name="image" id="recipe-image"/>
+                        <!--{% if recipe.image %}
+                        <img src="/{{ recipe.image }}" width="50px"/>
+                        {%endif%}-->
+                        <label for="name">Title</label><br/>
+                        <input type="text" id="name" name="name" value="{{ recipe.name }}"/>
+                        <label for="description">Description</label><br/>
+                        <input type="text" id="description" name="description" value="{{ recipe.description }}"/>
+                        <label for="portion_number">Portion:</label>
+                        <select id="portion_number" name="portion_number">
+                            {% for i in range %}
+                            <option value="{{i}}">{{i}}</option>
+                            {% endfor %}
+                        </select>
+                        <select id="category" name="category">
+                            <option value="1">Main Dish</option>
+                            <option value="2">Salad</option>
+                            <option value="3">Soup</option>
+                            <option value="4">Desert</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="input-container">
+                    <div class="col-sm-2">
+                        <label for="ingredient_quantity">Quantity:</label>
+                        <input type="text" id="ingredient_quantity"/>
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="ingredient_unit">Unit:</label>
+                        <select id="ingredient_unit">
+                            <option value=None>-</option>
+                            <option value="kg">kg</option>
+                            <option value="g">g</option>
+                            <option value="ml">ml</option>
+                            <option value="tbsp">tbsp</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="ingredient_name">Name:</label>
+                        <input type="text" id="ingredient_name"/>
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="button" onclick="createRecipeIngredient({{ recipe.pk }})">+</button>
+                    </div>
+                </div>
 
-</div>
+                <div id="container">
+                    {% for ingredient in recipe.recipeingredient_set.all%}
+                    <div id="innerContainer">
+                        <input type="text" readOnly="true" value="{{ingredient.quantity}}" name="ingredient_quantity"/>
+                        <input type="text" readOnly="true" value="{{ingredient.ingredient.unit}}" name="ingredient_unit"/>
+                        <input type="text" readOnly="true" value="{{ingredient.ingredient.name}}" name="ingredient_name"/>
+                        <button class="mp-btn mp-btn-sm mp-btn-red" type="button" onclick="deleteRecipeIngredient({{ ingredient.pk }})">Remove</button>
+                    </div>
+                    {% endfor %}
+                </div>
+                <br>
+                <div class="col-sm-12">
+                    <input class="mp-btn" type="submit" value="Save"/>
+                </div>
+            </form>
+
+        </div>
+    </div>
 </div>
 {% load staticfiles %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
