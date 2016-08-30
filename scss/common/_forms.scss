@@ -4,7 +4,6 @@ input[type="password"],
 .form-field{
 	width: 100%;
 	padding: 15px 15px;
-	border: none;
 	border: 1px solid $chalice;
 	color: $mine-shaft;
 	margin-bottom: 10px;
@@ -21,6 +20,8 @@ input[type="password"],
 input[readonly],
 input[readonly="true"]{
 	border: none;
+	padding: 5px;
+	border-bottom: 1px solid $chalice;
 }
 
 label{
