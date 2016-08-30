@@ -1,9 +1,15 @@
 {% extends 'website/base.html' %}
 
 {% block content %}
-<form method="post" action=".">
-    {% csrf_token %}
-    {{form}}
-    <input type="submit" value="Register"/>
-</form>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<form method="post" action=".">
+			    {% csrf_token %}
+			    {{form}}
+			    <input type="submit" value="Register"/>
+			</form>
+		</div>
+	</div>
+</div>
 {% endblock %}

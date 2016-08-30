@@ -364,14 +364,6 @@ body {
     margin-top: -16px;
     font-size: 1.35em; }
 
-#nav-btn-bordered {
-  border: 2px solid #6bbe98;
-  border-radius: 5px;
-  color: #6bbe98; }
-  #nav-btn-bordered:hover {
-    color: #fff;
-    background-color: #6bbe98; }
-
 footer {
   text-align: center;
   padding-top: 11px;

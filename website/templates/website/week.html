@@ -1,31 +1,37 @@
 {% extends 'website/base.html'%}
 {% block content %}
-<form action="/add-meal/" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <select id="name" name="name">
-        {% for day_id, day_name in day_names%}
-        <option value="{{day_id}}">{{day_name}}</option>
-        {% endfor %}
-    </select>
-    <select id="recipe" name="recipe" multiple>
-        {% for recipe in recipes%}
-        <option value="{{recipe.pk}}">{{recipe.name}}</option>
-        {% endfor %}
-    </select>
-    <input type="submit" value="Add"/>
-</form>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <form action="/add-meal/" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <select id="name" name="name">
+                    {% for day_id, day_name in day_names%}
+                    <option value="{{day_id}}">{{day_name}}</option>
+                    {% endfor %}
+                </select>
+                <select id="recipe" name="recipe" multiple>
+                    {% for recipe in recipes%}
+                    <option value="{{recipe.pk}}">{{recipe.name}}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Add"/>
+            </form>
 
-{% for day in days%}
-<div id="{{day.name}}">
-    <p>{{day.get_name_display}}</p>
-    {% for recipe in day.recipe.all%}
-    <div id="{{recipe.pk}}">
-        <p>{{recipe.name}}</p>
-        <button type="button" onclick="removeMeal({{ recipe.pk }}, '{{day.name}}')">X</button>
+            {% for day in days%}
+            <div id="{{day.name}}">
+                <p>{{day.get_name_display}}</p>
+                {% for recipe in day.recipe.all%}
+                <div id="{{recipe.pk}}">
+                    <p>{{recipe.name}}</p>
+                    <button type="button" onclick="removeMeal({{ recipe.pk }}, '{{day.name}}')">X</button>
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
     </div>
-    {% endfor %}
 </div>
-{% endfor %}
 
 {% load staticfiles %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>

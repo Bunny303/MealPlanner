@@ -1,46 +1,48 @@
 {% extends 'website/base.html' %}
 {% block content %}
-<div class="row">
-    <div class="col-md-12 col-md-offset-0">
-        <ul class="list-group">
-            {% for recipe in recipes %}
-            <li class="list-group-item">
-                <a href="{% url 'recipe-detail' recipe.pk %}">
-                    {% if recipe.image %}
-                    <img src="/{{ recipe.image }}" width="100px" height="100px"/>
-                    {% else %}
-                    <img src="http://dummyimage.com/100x100/eee/000000&text=RecipeImage" width="100px"/>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-md-offset-0">
+            <ul class="list-group">
+                {% for recipe in recipes %}
+                <li class="list-group-item">
+                    <a href="{% url 'recipe-detail' recipe.pk %}">
+                        {% if recipe.image %}
+                        <img src="/{{ recipe.image }}" width="100px" height="100px"/>
+                        {% else %}
+                        <img src="http://dummyimage.com/100x100/eee/000000&text=RecipeImage" width="100px"/>
+                        {% endif %}
+                        {{ recipe.name }}
+                        <!--{{ recipe.description }}-->
+                    </a>
+                    {% if active == 'my-recipe-list' %}
+                    <form action="{% url 'recipe-update' recipe.pk %}" method="GET">
+                        <input type="submit" value="Edit"/>
+                    </form>
+                    <form action="{% url 'recipe-delete' pk=recipe.pk next=recipes.number %}" method="POST">
+                        {% csrf_token %}
+                        <input type="submit" value="Delete"/>
+                    </form>
                     {% endif %}
-                    {{ recipe.name }}
-                    <!--{{ recipe.description }}-->
-                </a>
-                {% if active == 'my-recipe-list' %}
-                <form action="{% url 'recipe-update' recipe.pk %}" method="GET">
-                    <input type="submit" value="Edit"/>
-                </form>
-                <form action="{% url 'recipe-delete' pk=recipe.pk next=recipes.number %}" method="POST">
-                    {% csrf_token %}
-                    <input type="submit" value="Delete"/>
-                </form>
-                {% endif %}
-            </li>
-            {% endfor %}
-        </ul>
-
-        <nav>
-            <ul class="pager">
-                {% if recipes.has_previous %}
-                <li class="previous"><a href="?page={{ recipes.previous_page_number }}"><span
-                        aria-hidden="true">&larr;</span> Older</a></li>
-                {% endif %}
-                <p>{{ recipes.number }}</p>
-                {% if recipes.has_next %}
-                <li class="next"><a href="?page={{ recipes.next_page_number }}">Newer <span
-                        aria-hidden="true">&rarr;</span></a></li>
-                {% endif %}
+                </li>
+                {% endfor %}
             </ul>
-        </nav>
 
+            <nav>
+                <ul class="pager">
+                    {% if recipes.has_previous %}
+                    <li class="previous"><a href="?page={{ recipes.previous_page_number }}"><span
+                            aria-hidden="true">&larr;</span> Older</a></li>
+                    {% endif %}
+                    <p>{{ recipes.number }}</p>
+                    {% if recipes.has_next %}
+                    <li class="next"><a href="?page={{ recipes.next_page_number }}">Newer <span
+                            aria-hidden="true">&rarr;</span></a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+
+        </div>
     </div>
 </div>
 {% endblock %}
