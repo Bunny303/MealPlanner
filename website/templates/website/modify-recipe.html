@@ -2,19 +2,19 @@
 {% block content %}
 <div class="container mp-cnt">
     <div class="row">
-        <div class="col-sm-12">
-            <form action="." method="post" enctype="multipart/form-data">
-                <div class="col-sm-6">
-                    {% csrf_token %}
-                    <div id="recipe-container">
-                        <input type='file' name="image" id="recipe-image"/>
-                        <!--{% if recipe.image %}
-                        <img src="/{{ recipe.image }}" width="50px"/>
-                        {%endif%}-->
-                        <label for="name">Title</label><br/>
+        <form action="." method="post" enctype="multipart/form-data">
+            <div class="col-sm-12 mod-recipe-main">
+                {% csrf_token %}
+                <div id="recipe-container">
+                    <div class="col-sm-6">
+                        <label for="name">Title</label>
                         <input type="text" id="name" name="name" value="{{ recipe.name }}"/>
-                        <label for="description">Description</label><br/>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="description">Description</label>
                         <input type="text" id="description" name="description" value="{{ recipe.description }}"/>
+                    </div>
+                    <div class="col-sm-6">
                         <label for="portion_number">Portion:</label>
                         <select id="portion_number" name="portion_number">
                             {% for i in range %}
@@ -28,48 +28,68 @@
                             <option value="4">Desert</option>
                         </select>
                     </div>
-                </div>
-                <div id="input-container">
-                    <div class="col-sm-2">
-                        <label for="ingredient_quantity">Quantity:</label>
-                        <input type="text" id="ingredient_quantity"/>
-                    </div>
-                    <div class="col-sm-2">
-                        <label for="ingredient_unit">Unit:</label>
-                        <select id="ingredient_unit">
-                            <option value=None>-</option>
-                            <option value="kg">kg</option>
-                            <option value="g">g</option>
-                            <option value="ml">ml</option>
-                            <option value="tbsp">tbsp</option>
-                        </select>
-                    </div>
-                    <div class="col-sm-2">
-                        <label for="ingredient_name">Name:</label>
-                        <input type="text" id="ingredient_name"/>
-                    </div>
-                    <div class="col-sm-2">
-                        <button type="button" onclick="createRecipeIngredient({{ recipe.pk }})">+</button>
+                    <div class="col-sm-6">
+                        <label>Image:</label>
+                        <input type='file' name="image" id="recipe-image"/>
+                        <!--{% if recipe.image %}
+                        <img src="/{{ recipe.image }}" width="50px"/>
+                        {%endif%}-->
                     </div>
                 </div>
+            </div>
+            <div id="input-container" class="col-sm-12 mod-recipe-add-ing clearfix">
+                <div class="col-xs-3">
+                    <label for="ingredient_quantity">Quantity:</label>
+                    <input type="text" id="ingredient_quantity"/>
+                </div>
+                <div class="col-xs-3">
+                    <label for="ingredient_unit">Unit:</label>
+                    <select id="ingredient_unit">
+                        <option value=None>-</option>
+                        <option value="kg">kg</option>
+                        <option value="g">g</option>
+                        <option value="ml">ml</option>
+                        <option value="tbsp">tbsp</option>
+                    </select>
+                </div>
+                <div class="col-xs-3">
+                    <label for="ingredient_name">Name:</label>
+                    <input type="text" id="ingredient_name"/>
+                </div>
+                <div class="col-xs-3">
+                    <button class="mp-btn mp-btn-sm" type="button" onclick="createRecipeIngredient({{ recipe.pk }})">Add ingredient</button>
+                </div>
+            </div>
 
-                <div id="container">
-                    {% for ingredient in recipe.recipeingredient_set.all%}
-                    <div id="innerContainer">
-                        <input type="text" readOnly="true" value="{{ingredient.quantity}}" name="ingredient_quantity"/>
-                        <input type="text" readOnly="true" value="{{ingredient.ingredient.unit}}" name="ingredient_unit"/>
+            <div class="col-sm-12">
+                <h3>Ingredients:</h3>
+            </div>
+            <div id="container" class="col-sm-12 mod-recipe-ing-item clearfix">
+                {% for ingredient in recipe.recipeingredient_set.all%}
+                <div id="innerContainer ">
+                    <div class="col-xs-9 col-sm-5">
                         <input type="text" readOnly="true" value="{{ingredient.ingredient.name}}" name="ingredient_name"/>
+                    </div>
+                    <div class="col-xs-3 col-sm-2 col-sm-push-5 text-right">
                         <button class="mp-btn mp-btn-sm mp-btn-red" type="button" onclick="deleteRecipeIngredient({{ ingredient.pk }})">Remove</button>
                     </div>
-                    {% endfor %}
+                    <div class="col-xs-6 col-sm-2 col-sm-pull-2">
+                        <input type="text" readOnly="true" value="{{ingredient.quantity}}" name="ingredient_quantity"/>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-sm-pull-2">
+                        <input type="text" readOnly="true" value="{{ingredient.ingredient.unit}}" name="ingredient_unit"/>
+                    </div>
+                    <div class="col-xs-12">
+                        <hr>
+                    </div>
                 </div>
-                <br>
-                <div class="col-sm-12">
-                    <input class="mp-btn" type="submit" value="Save"/>
-                </div>
-            </form>
-
-        </div>
+                {% endfor %}
+            </div>
+            <br>
+            <div class="col-sm-12">
+                <input class="mp-btn" type="submit" value="Save"/>
+            </div>
+        </form>
     </div>
 </div>
 {% load staticfiles %}

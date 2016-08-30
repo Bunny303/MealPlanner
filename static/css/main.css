@@ -271,7 +271,7 @@ body {
     font-family: BloggerSans, Helvetica, sans-serif; }
 
 .mp-cnt {
-  margin: 40px 0; }
+  padding: 40px 0; }
 
 .text-fw-light {
   font-weight: 300; }
@@ -447,6 +447,7 @@ input[type="password"],
     border-color: #6bbe98;
     outline: none; }
 
+input[readonly],
 input[readonly="true"] {
   border: none; }
 
@@ -709,3 +710,12 @@ label {
 @media (min-width: 1170px) {
   .three-steps-section .step-heading {
     height: 42px; } }
+
+.mod-recipe-main {
+  margin-bottom: 30px; }
+
+.mod-recipe-add-ing {
+  margin-bottom: 30px; }
+
+.mod-recipe-ing-item {
+  margin-bottom: 30px; }

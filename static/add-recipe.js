@@ -37,6 +37,7 @@ function addIngredientField(recipeIngredientId)
     button.onclick = function(){
         deleteRecipeIngredient(recipeIngredientId);
     };
+    button.className += ' mp-btn mp-btn-sm mp-btn-red';
     button.innerText = 'Remove';
     button.type = 'button';
     innerContainer.appendChild(button);
