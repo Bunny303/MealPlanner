@@ -6,24 +6,50 @@
 	border: none;
 	border-bottom: 1px solid $alto;
 	margin-bottom: 0;
- 	letter-spacing: 1px;
+ 	letter-spacing: 0.5px;
+	height: $nav-height;
 
 	.navbar-nav{
 		&>li>a{
-			padding: 10px 15px;
-			margin: 15px 2px;
 			font-weight: 500;
-			font-size: 1.1em;
+			font-size: 0.9em;
 			border: 2px solid transparent;
-			border-radius: 3px;
+			border-radius: 0;
+			display: inline-block;
+			position: relative;
+			padding: 10px 5px;
 
-			@include mixinTransition(background-color color);
+			@include sm-devices-up {
+				margin: 15px 2px;
+			}
+
+			@include mixinTransition(opacity color transform);
+
+			&:before{
+				content: '';
+				position: absolute;
+				left: 5px;
+				right: 5px;
+				bottom: 0;
+				height: 3px;
+				background-color: $green;
+				color: $white;
+				opacity: 0;
+				transform: scaleX(0);
+
+				@include mixinTransition(opacity transform);
+			}
 
 			&:focus,
 			&:hover{
 				color: $green;
-				// color: $white;
-				// background-color: $green;
+				outline: none;
+				background-color: transparent;
+
+				&:before{
+					opacity: 1;
+					transform: scaleX(1);
+				}
 			}
 		}
 
@@ -31,8 +57,13 @@
 			&,
 			&:focus,
 			&:hover{
-				color: $white;
-				background-color: $green;
+				background-color: transparent;
+				color: $green;
+
+				&:before{
+					opacity: 1;
+					transform: scaleX(1);
+				}
 			}
 		}
 	}
@@ -40,6 +71,37 @@
 	.navbar-brand{
 		padding: 0;
 		width: 100px;
+	}
+
+	.dropdown{
+		a{
+			outline: none;
+		}
+
+		.open a{
+			background-color: transparent;
+		}
+	}
+
+	.navbar-toggle{
+		margin-top: 20px;
+		border-color: $green;
+
+		.icon-bar{
+			background-color: $green;
+		}
+	}
+
+	.navbar-header{
+		height: $nav-height;
+	}
+
+	.navbar-collapse{
+		background-color: $white;
+
+		@include sm-devices-up {
+			background-color: transparent;
+		}
 	}
 }
 

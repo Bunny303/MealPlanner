@@ -4,19 +4,17 @@ html, body{
 
 .block-content{
 	min-height: 100%;
-	// margin-top: -$nav-height;
+	margin-top: -$nav-height;
+	padding-top: $nav-height;
 	margin-bottom: -$footer-height;
-	// padding-top: 30px;
-	// padding-bottom: 30px;
 
-	&:before,
 	&:after{
 		content: "";
 		display: block;
 	}
 
 	&:before{
-		height: $nav-height
+		// height: $nav-height;
 	}
 
 	&:after{

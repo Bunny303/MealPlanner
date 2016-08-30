@@ -1,8 +1,9 @@
 footer{
 	text-align: center;
-	padding: 11px 0;
+	padding-top: 11px;
 	background-color: $white;
 	font-size: 0.85em;
+	height: $footer-height;
 
 	.colored{
 		color: $green;
@@ -23,8 +24,14 @@ footer.footer-inverse{
 	position: absolute;
 	right: 100px;
 	top: 28px;
-	@include mixinTransition(top);
 	cursor: pointer;
+	display: none;
+
+	@include sm-devices-up{
+		display: block;
+	}
+
+	@include mixinTransition(top);
 
 	&:after{
 		content: '';
