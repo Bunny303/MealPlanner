@@ -357,6 +357,9 @@ body {
     @media (min-width: 768px) {
       .navbar-default .navbar-collapse {
         background-color: transparent; } }
+  .navbar-default .navbar-collapse.collapse.in {
+    position: relative;
+    z-index: 1000; }
 
 .logo-text {
   font-weight: bold;
@@ -435,7 +438,7 @@ input[type="email"],
 input[type="password"],
 .form-field {
   width: 100%;
-  padding: 15px 15px;
+  padding: 10px 15px;
   border: 1px solid #aaa;
   color: #2b2b2b;
   margin-bottom: 10px;

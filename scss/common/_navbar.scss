@@ -103,6 +103,11 @@
 			background-color: transparent;
 		}
 	}
+
+	.navbar-collapse.collapse.in{
+		position: relative;
+		z-index: $lvl-10;
+	}
 }
 
 .logo-text{
