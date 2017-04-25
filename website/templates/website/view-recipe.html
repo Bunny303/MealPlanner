@@ -1,28 +1,34 @@
 {% extends 'website/base.html' %}
 {% block content %}
-<div class="row">
-    <div class="col-sm-6">
-        <div id="recipe-container">
-            {% if recipe.image %}
-            <img src="/{{ recipe.image }}" width="50px" height="50px"/>
-            {% else %}
-            <img src="http://dummyimage.com/50x50/eee/000000&text=RecipeImage" width="50px"/>
-            {% endif %}
-            {{ recipe.name }}
-            {{ recipe.description }}
-            <select id="portion_number" name="portion_number">
-                {% for i in range %}
-                <option value="{{i}}">{{i}}</option>
-                {% endfor %}
-            </select>
+<div class="container mp-cnt">
+    <div class="row">
+        <div class="mod-recipe-main">
+            <div class="col-sm-12">
+                <h3 class="mp-heading">{{ recipe.name }}</h3>
+            </div>
+            <div id="recipe-container">
+                <div class="col-sm-6">
+                    {% if recipe.image %}
+                    <img src="/{{ recipe.image }}" width="50px" height="50px"/>
+                    {% else %}
+                    <img src="http://dummyimage.com/50x50/eee/000000&text=RecipeImage" width="50px"/>
+                    {% endif %}
+                    {{ recipe.description }}
+                    <select id="portion_number" name="portion_number">
+                        {% for i in range %}
+                        <option value="{{i}}">{{i}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
         </div>
-    </div>
-    <div id="container">
-        {% for ingredient in recipe.recipeingredient_set.all%}
-        <p class="ing-quantity">{{ingredient.quantity}}</p>
-        <p>{{ingredient.ingredient.unit}}</p>
-        <p>{{ingredient.ingredient.name}}</p>
-        {% endfor %}
+        <div id="container">
+            {% for ingredient in recipe.recipeingredient_set.all%}
+            <p class="ing-quantity">{{ingredient.quantity}}</p>
+            <p>{{ingredient.ingredient.unit}}</p>
+            <p>{{ingredient.ingredient.name}}</p>
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% load staticfiles %}

@@ -3,7 +3,7 @@
 <div class="container mp-cnt">
     <form action="." method="post" enctype="multipart/form-data">
         <div class="row">
-            <div class="col-sm-12 mod-recipe-main">
+            <div class="mod-recipe-main">
                 <div class="col-sm-12">
                     <h3 class="mp-heading">Recipe Details</h3>
                 </div>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <div id="input-container" class="col-sm-12 mod-recipe-add-ing clearfix">
+            <div id="input-container" class="mod-recipe-add-ing clearfix">
 
                 <div class="col-sm-12">
                     <h3 class="mp-heading">Add New ingredient</h3>
@@ -70,7 +70,7 @@
                 </div>
             </div>
 
-            <div id="container" class="col-sm-12 mod-recipe-ing-item-cnt clearfix">
+            <div id="container" class="mod-recipe-ing-item-cnt clearfix">
                 {% for ingredient in recipe.recipeingredient_set.all %}
 
                 {% if forloop.first %}  
@@ -89,16 +89,14 @@
                         <input type="text" readOnly="true" value="{{ingredient.quantity}}" name="ingredient_quantity"/>
                     </div>
                     <div class="col-xs-6 col-sm-3 col-sm-pull-2">
-                        <input type="text" readOnly="true" value="{{ingredient.ingredient.unit}}" name="ingredient_unit"/>
+                        <input type="tex"tpla yreadOnly="true" value="{{ingredient.ingredient.unit}}" name="ingredient_unit"/>
                     </div>
                 </div>
                 {% endfor %}
             </div>
             <br>
             <div class="col-sm-12 text-right">
-                <div class="col-sm-12">
                     <input class="mp-btn mp-btn-lg" type="submit" value="Save"/>
-                </div>
             </div>
         </div>
     </form>
