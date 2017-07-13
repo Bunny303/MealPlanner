@@ -20,8 +20,7 @@ class HomePageView(TemplateView):
         context['active'] = 'home'
         return context
 
-
-class RecipeList(LoginRequiredMixin, ListView):
+class RecipeList(ListView):
     model = Recipe
     template_name = 'website/recipes.html'
     context_object_name = 'recipes'
@@ -80,7 +79,7 @@ class GroceryList(LoginRequiredMixin, ListView):
         return context
 
 
-class RecipeDetailView(LoginRequiredMixin, DetailView):
+class RecipeDetailView(DetailView):
     model = Recipe
     context_object_name = 'recipe'
     template_name = 'website/view-recipe.html'

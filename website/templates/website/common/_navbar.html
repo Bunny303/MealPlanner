@@ -58,6 +58,14 @@
                     </li>
                 </ul>
                 {% else %}
+                <ul class="nav navbar-nav">
+                    <li class="{% if active == 'home' %} active {% endif %}">
+                        <a href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="{% if active == 'recipe-list' %} active {% endif %}">
+                        <a href="{% url 'recipe-list' %}">Recipe List</a>
+                    </li>
+                </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{% url 'login' %}">Login</a></li>
                     <li><a href="{% url 'register' %}">Sign Up</a></li>
