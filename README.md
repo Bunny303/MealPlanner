@@ -9,6 +9,7 @@ Recipe keeper application. Support creating of weekly menu and grocery list.
 * Django 1.9
 * PostgreSQL
 
+Go to: http://planyourmeal.herokuapp.com/
 For testing you can use already register username: admin and password: qwerty123 or just register new user.
 
 Note: App is not finished, so not everything works properly.
